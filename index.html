@@ -17,10 +17,11 @@
     <h2>Results</h2>
     <ul ng-show="results.length" style="list-style: none; padding: 0">
       <li ng-repeat="result in results">
-        
+        <img ng-src="{{result.media$group.media$thumbnail[0].url}}">
+        {{result.title.$t}}
       </li>
     </ul>
-    <p ng-hide="results">↑↑上記から検索してください。</p>
+    <p ng-hide="results.length">上記から検索してください。</p>
   </div>
 
 </body>
